@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "adega_iot")(type "KiCad")(uri "${KIPRJMOD}/adega_iot.pretty")(options "")(descr ""))
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/kicad-libraries/footprints/Espressif.pretty")(options "")(descr ""))
+  (lib (name "KiCad")(type "KiCad")(uri "${KIPRJMOD}/lm2596/KiCad.pretty")(options "")(descr ""))
 )
