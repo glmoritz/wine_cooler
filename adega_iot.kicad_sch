@@ -5,32 +5,32 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "Amplifier_Operational:RC4558" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
+    (symbol "Amplifier_Operational:LM324" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "RC4558" (at 0 -5.08 0)
+      (property "Value" "LM324" (at 0 -5.08 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 0 0 0)
+      (property "Footprint" "" (at -1.27 2.54 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/rc4558.pdf" (at 0 0 0)
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" (at 1.27 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_locked" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "ki_keywords" "dual opamp" (at 0 0 0)
+      (property "ki_keywords" "quad opamp" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Dual General Purpose, Operational Amplifier, DIP-8/SOIC-8/SSOP-8" (at 0 0 0)
+      (property "ki_description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*" (at 0 0 0)
+      (property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "RC4558_1_1"
+      (symbol "LM324_1_1"
         (polyline
           (pts
             (xy -5.08 5.08)
@@ -54,7 +54,7 @@
           (number "3" (effects (font (size 1.27 1.27))))
         )
       )
-      (symbol "RC4558_2_1"
+      (symbol "LM324_2_1"
         (polyline
           (pts
             (xy -5.08 5.08)
@@ -78,14 +78,62 @@
           (number "7" (effects (font (size 1.27 1.27))))
         )
       )
-      (symbol "RC4558_3_1"
+      (symbol "LM324_3_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "9" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "LM324_4_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08)
+            (xy 5.08 0)
+            (xy -5.08 -5.08)
+            (xy -5.08 5.08)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+" (effects (font (size 1.27 1.27))))
+          (number "12" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-" (effects (font (size 1.27 1.27))))
+          (number "13" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "14" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "LM324_5_1"
         (pin power_in line (at -2.54 -7.62 90) (length 3.81)
           (name "V-" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
+          (number "11" (effects (font (size 1.27 1.27))))
         )
         (pin power_in line (at -2.54 7.62 270) (length 3.81)
           (name "V+" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1522,6 +1570,22 @@
     (uuid f29911f1-f1ba-487b-a53e-98e77f0d1f58)
   )
 
+  (no_connect (at 114.3 90.17) (uuid 0d638c58-0f6e-43a5-9f8b-77dc081369f6))
+  (no_connect (at 185.42 78.74) (uuid 0f1e72d4-dd52-4be5-8040-6e3fc758f3d5))
+  (no_connect (at 114.3 100.33) (uuid 117c9a41-b1c5-476a-8797-fb6b18775d58))
+  (no_connect (at 48.26 72.39) (uuid 13be067f-593b-4365-9dbf-de826484acc2))
+  (no_connect (at 48.26 77.47) (uuid 1d6accd8-7e55-4579-b423-4c81e1dbc9fe))
+  (no_connect (at 114.3 77.47) (uuid 23a18c88-5d42-4187-a07c-8547eef02004))
+  (no_connect (at 114.3 102.87) (uuid 332ab88b-3f1a-4a73-a58c-284477e7c947))
+  (no_connect (at 114.3 105.41) (uuid 4f397964-4961-4976-bad2-5d3f70997031))
+  (no_connect (at 114.3 92.71) (uuid 4fde6192-9c79-49c3-ab23-34c9522b40ad))
+  (no_connect (at 48.26 74.93) (uuid 8165e467-4284-41ba-85bf-182d18bf6665))
+  (no_connect (at 114.3 87.63) (uuid 93909682-8de9-45a5-afc3-5b93273342b7))
+  (no_connect (at 114.3 97.79) (uuid e5fed662-dc4f-496e-890f-287cd425432c))
+  (no_connect (at 114.3 52.07) (uuid e7b92440-ebdc-4590-842c-55b928bb7433))
+  (no_connect (at 114.3 95.25) (uuid eacc1191-0abd-4f9b-955c-04696d8062a7))
+  (no_connect (at 114.3 74.93) (uuid efcac760-c1aa-48b2-a804-5d9389765c65))
+
   (wire (pts (xy 127 116.84) (xy 135.89 116.84))
     (stroke (width 0) (type default))
     (uuid 01c269ec-e3c3-48dd-9e67-123b4212bfa2)
@@ -1594,6 +1658,10 @@
     (stroke (width 0) (type default))
     (uuid 1984d358-3f45-494b-895f-93b60a74b6a8)
   )
+  (wire (pts (xy 248.92 81.28) (xy 248.92 87.63))
+    (stroke (width 0) (type default))
+    (uuid 19ae9a89-3e4e-425d-ac7b-049d36e3df88)
+  )
   (wire (pts (xy 77.47 165.1) (xy 77.47 168.91))
     (stroke (width 0) (type default))
     (uuid 19cbd1da-769b-4975-b0a0-6ee87ab47e0b)
@@ -1618,6 +1686,10 @@
     (stroke (width 0) (type default))
     (uuid 1ef66949-ecdb-4e57-9e81-c1a47d1461a8)
   )
+  (wire (pts (xy 214.63 19.05) (xy 168.91 19.05))
+    (stroke (width 0) (type default))
+    (uuid 1f31d517-fffa-4934-89fe-19298b6095cf)
+  )
   (wire (pts (xy 182.88 68.58) (xy 182.88 71.12))
     (stroke (width 0) (type default))
     (uuid 20697f03-cdeb-4443-bf54-2f9d2f7e4b35)
@@ -1630,17 +1702,9 @@
     (stroke (width 0) (type default))
     (uuid 2224c21c-6427-4b45-806b-6df15fe0f050)
   )
-  (wire (pts (xy 248.92 62.23) (xy 248.92 66.04))
-    (stroke (width 0) (type default))
-    (uuid 23b6aeb9-e0bd-4070-9026-8ef0171ed1aa)
-  )
   (wire (pts (xy 33.02 69.85) (xy 48.26 69.85))
     (stroke (width 0) (type default))
     (uuid 28a6e34a-7141-4915-a9d3-0de5d9c2af25)
-  )
-  (wire (pts (xy 179.07 21.59) (xy 214.63 21.59))
-    (stroke (width 0) (type default))
-    (uuid 2b11bacd-82f7-437d-86ec-807e69d7f4e3)
   )
   (wire (pts (xy 149.86 30.48) (xy 158.75 30.48))
     (stroke (width 0) (type default))
@@ -1722,6 +1786,10 @@
     (stroke (width 0) (type default))
     (uuid 4e150864-a301-4fc6-ab52-a5f53c01c5e1)
   )
+  (wire (pts (xy 168.91 45.72) (xy 168.91 50.8))
+    (stroke (width 0) (type default))
+    (uuid 4ef9fa8a-2fc2-4f93-808a-e22a3934fa22)
+  )
   (wire (pts (xy 259.08 43.18) (xy 259.08 48.26))
     (stroke (width 0) (type default))
     (uuid 5616b267-3c67-4b86-99f1-1db574a98703)
@@ -1778,9 +1846,17 @@
     (stroke (width 0) (type default))
     (uuid 671796a8-9e70-448f-89ef-90acb3f6ddf5)
   )
+  (wire (pts (xy 114.3 54.61) (xy 130.81 54.61))
+    (stroke (width 0) (type default))
+    (uuid 674574b9-b526-4a7a-88dc-95030278d7fa)
+  )
   (wire (pts (xy 114.3 44.45) (xy 132.08 44.45))
     (stroke (width 0) (type default))
     (uuid 68b44941-32aa-428f-958a-ddeed8a0e9d0)
+  )
+  (wire (pts (xy 168.91 19.05) (xy 168.91 27.94))
+    (stroke (width 0) (type default))
+    (uuid 6eead04e-5dd7-4430-9cf6-ad6eca3d1c34)
   )
   (wire (pts (xy 102.87 167.64) (xy 104.14 167.64))
     (stroke (width 0) (type default))
@@ -1850,10 +1926,6 @@
     (stroke (width 0) (type default))
     (uuid 878fcdeb-9ef4-42e6-b143-f88b6d9b991a)
   )
-  (wire (pts (xy 190.5 24.13) (xy 214.63 24.13))
-    (stroke (width 0) (type default))
-    (uuid 87e6a4c3-358a-4967-9e87-4656d60e3e02)
-  )
   (wire (pts (xy 181.61 129.54) (xy 193.04 129.54))
     (stroke (width 0) (type default))
     (uuid 88384df3-2ec0-4794-a17a-e8a1a7fe4dbb)
@@ -1909,6 +1981,14 @@
   (wire (pts (xy 147.32 142.24) (xy 165.1 142.24))
     (stroke (width 0) (type default))
     (uuid 9629e4e8-d46f-4be3-96e8-85d36e705daa)
+  )
+  (wire (pts (xy 168.91 35.56) (xy 168.91 38.1))
+    (stroke (width 0) (type default))
+    (uuid 9739115b-0b43-423f-9604-3e47251917df)
+  )
+  (wire (pts (xy 179.07 21.59) (xy 214.63 21.59))
+    (stroke (width 0) (type default))
+    (uuid 993ed335-f89e-476b-b211-d1872c29bd8b)
   )
   (wire (pts (xy 33.02 62.23) (xy 48.26 62.23))
     (stroke (width 0) (type default))
@@ -2010,10 +2090,6 @@
     (stroke (width 0) (type default))
     (uuid bc10d5ec-b724-4f8c-9336-fbd483681feb)
   )
-  (wire (pts (xy 248.92 81.28) (xy 248.92 87.63))
-    (stroke (width 0) (type default))
-    (uuid bf579397-4b53-4387-a97f-3e94c27fc2ec)
-  )
   (wire (pts (xy 130.81 138.43) (xy 111.76 138.43))
     (stroke (width 0) (type default))
     (uuid c0a39664-576e-48a7-ad65-727bf48f6f78)
@@ -2033,6 +2109,10 @@
   (wire (pts (xy 185.42 81.28) (xy 182.88 81.28))
     (stroke (width 0) (type default))
     (uuid ce40c762-1c94-422b-a00d-1919cfb34b33)
+  )
+  (wire (pts (xy 248.92 62.23) (xy 248.92 66.04))
+    (stroke (width 0) (type default))
+    (uuid ce649943-b570-4bc5-8699-263c0c4b3b11)
   )
   (wire (pts (xy 111.76 138.43) (xy 111.76 142.24))
     (stroke (width 0) (type default))
@@ -2134,6 +2214,10 @@
     (stroke (width 0) (type default))
     (uuid f1d325ae-7218-4ba3-ae6d-0e9482a97f70)
   )
+  (wire (pts (xy 190.5 24.13) (xy 214.63 24.13))
+    (stroke (width 0) (type default))
+    (uuid f28146c1-7427-45f6-bd42-c7ffda7e71c2)
+  )
   (wire (pts (xy 241.3 71.12) (xy 241.3 66.04))
     (stroke (width 0) (type default))
     (uuid f2e2967f-9458-4f86-a587-e92c8d31875d)
@@ -2212,6 +2296,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 19e0526b-580b-406b-8738-35dc9c118308)
   )
+  (label "LED3" (at 124.46 54.61 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 1a485ad6-4f57-4b78-96cc-8394d4012033)
+  )
   (label "RST" (at 34.29 44.45 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 249b8ccb-7609-49d1-be3c-10bef15016fd)
@@ -2223,6 +2311,10 @@
   (label "SW2" (at 251.46 30.48 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3264d1af-9e62-4210-b5bd-938a5383c373)
+  )
+  (label "LED3" (at 208.28 26.67 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 33f4c5b7-c0b5-4f36-b57d-d6f77e276bb0)
   )
   (label "GPIO_34" (at 35.56 69.85 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2239,10 +2331,6 @@
   (label "SW2" (at 33.02 52.07 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 48a56100-0385-4c61-8037-57754845a13c)
-  )
-  (label "LED1" (at 208.28 24.13 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 4d5c9d53-7a27-41fc-a3a4-33431a86a540)
   )
   (label "FAN2" (at 86.36 167.64 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2272,9 +2360,9 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8b8bcabc-500f-4ae0-bfe1-e26a3ad7d8cf)
   )
-  (label "LED2" (at 208.28 26.67 0) (fields_autoplaced)
+  (label "LED1" (at 208.28 21.59 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 92f3cf99-a1ec-4d86-8c6c-e17f790ec74f)
+    (uuid 91334625-9c8b-4d96-8891-22af896fc03c)
   )
   (label "TXD" (at 130.81 111.76 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2292,13 +2380,17 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a5d156f7-179f-4a24-b370-2b2c14199937)
   )
-  (label "LED0" (at 208.28 21.59 0) (fields_autoplaced)
+  (label "LED0" (at 208.28 19.05 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a800badf-9c27-43d7-9f80-5bc7abbbae8a)
   )
   (label "TCK" (at 200.66 73.66 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ab49ecfc-7972-469e-96a0-c37e47a09f51)
+  )
+  (label "LED2" (at 208.28 24.13 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid b5e0a045-f637-4dbc-b05b-c12b34693ce8)
   )
   (label "TMS" (at 34.29 62.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2345,38 +2437,6 @@
     (uuid fa6552db-49ea-44e8-a5ea-0e0b0be40cc3)
   )
 
-  (symbol (lib_id "Amplifier_Operational:RC4558") (at 248.92 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 025945b5-2420-4843-9206-2bd4eddd730f)
-    (property "Reference" "U1" (at 254 66.04 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "RC4558" (at 255.27 68.58 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 248.92 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/rc4558.pdf" (at 248.92 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 751096a9-33a7-41e2-acb1-61550fe95ee4))
-    (pin "2" (uuid 459813b8-81fd-49df-a5f9-b3f1f6bbeecc))
-    (pin "3" (uuid 199af8d0-2f44-49ed-80a4-35be08b6c93e))
-    (pin "5" (uuid 1bf217bc-3fde-429f-952f-107cb941397e))
-    (pin "6" (uuid ded583f1-c9c2-4596-a546-d347535f4a64))
-    (pin "7" (uuid b124a2b2-5aab-434e-9191-5197bc8f3bce))
-    (pin "4" (uuid 88e85711-4c39-401b-bffd-a7041c4b0283))
-    (pin "8" (uuid a9deb93e-b855-448a-a64b-0ae958a7975a))
-    (instances
-      (project "adega_iot"
-        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "U1") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Transistor_BJT:BC548") (at 60.96 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0266824c-5bce-4154-a8b7-ea2942614b76)
@@ -2407,7 +2467,7 @@
   (symbol (lib_id "power:+3V3") (at 259.08 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0454a963-37f5-494c-8237-1f28290e7112)
-    (property "Reference" "#PWR020" (at 259.08 22.86 0)
+    (property "Reference" "#PWR02" (at 259.08 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 259.08 15.24 0)
@@ -2423,7 +2483,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 168.91 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 0636457b-3ea8-4350-a4a6-8c4e188eec30)
+    (property "Reference" "#PWR013" (at 168.91 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 168.91 55.88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 168.91 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 168.91 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3b58fc9b-4ca6-49ff-a368-ea8f190466fd))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -2432,7 +2517,7 @@
   (symbol (lib_id "power:GND") (at 179.07 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 09b71006-c430-4f1b-83e4-64f3ed712958)
-    (property "Reference" "#PWR012" (at 179.07 57.15 0)
+    (property "Reference" "#PWR014" (at 179.07 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 179.07 55.88 0)
@@ -2448,7 +2533,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -2457,7 +2542,7 @@
   (symbol (lib_id "power:GND") (at 49.53 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0c38fa6d-5905-44a2-ab20-054fc42dd54d)
-    (property "Reference" "#PWR034" (at 49.53 39.37 0)
+    (property "Reference" "#PWR07" (at 49.53 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 38.1 0)
@@ -2473,7 +2558,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -2482,7 +2567,7 @@
   (symbol (lib_id "power:GND") (at 228.6 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11e89e55-15d9-43d0-9611-d6730b7ad20b)
-    (property "Reference" "#PWR023" (at 228.6 88.9 0)
+    (property "Reference" "#PWR024" (at 228.6 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 228.6 87.63 0)
@@ -2498,7 +2583,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -2507,7 +2592,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 82.55 162.56 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1989d6d7-cdce-47b2-a163-e112e647086b)
-    (property "Reference" "J2" (at 78.74 158.75 0)
+    (property "Reference" "J9" (at 78.74 158.75 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 77.47 158.75 0)
@@ -2524,7 +2609,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J2") (unit 1)
+          (reference "J9") (unit 1)
         )
       )
     )
@@ -2556,10 +2641,36 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 168.91 31.75 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 1ee6147f-b90a-48c6-ab05-1c3c0e2803aa)
+    (property "Reference" "R3" (at 171.45 31.115 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1k" (at 171.45 33.655 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 167.132 31.75 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 168.91 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 631b92eb-be4c-4aaa-9d2d-9c43059106fd))
+    (pin "2" (uuid a91c1450-a21f-4f6f-8103-5dc43d5d65f7))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "R3") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 265.43 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 28ad2099-c0d7-4a88-89dd-9f6beb81558a)
-    (property "Reference" "#PWR025" (at 265.43 93.98 0)
+    (property "Reference" "#PWR029" (at 265.43 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 265.43 92.71 0)
@@ -2575,7 +2686,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -2584,7 +2695,7 @@
   (symbol (lib_id "power:GND") (at 19.05 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 28c6eb65-7a7b-4ab0-9d5b-d1ea3a17e94c)
-    (property "Reference" "#PWR030" (at 19.05 125.73 0)
+    (property "Reference" "#PWR040" (at 19.05 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 19.05 124.46 0)
@@ -2600,7 +2711,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -2637,7 +2748,7 @@
   (symbol (lib_id "Transistor_BJT:BC558") (at 198.12 142.24 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2bf18d93-c855-4bfa-bb01-e6ad63936ef0)
-    (property "Reference" "Q4" (at 203.2 141.605 0)
+    (property "Reference" "Q5" (at 203.2 141.605 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC558" (at 203.2 144.145 0)
@@ -2655,7 +2766,33 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q4") (unit 1)
+          (reference "Q5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 168.91 41.91 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2d948c1f-f6d5-4ffc-b7f0-3b3ea548bae6)
+    (property "Reference" "D1" (at 172.72 42.8625 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "LED" (at 172.72 45.4025 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 168.91 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 168.91 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 02200081-c46e-4468-92e4-1271d11c2f40))
+    (pin "2" (uuid 8ae28517-79ee-4d61-bf83-f3d0ff2ee404))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -2664,7 +2801,7 @@
   (symbol (lib_id "power:GND") (at 81.28 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3064b5fe-63d5-4578-8866-2e07c65a7c36)
-    (property "Reference" "#PWR011" (at 81.28 120.65 0)
+    (property "Reference" "#PWR038" (at 81.28 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 81.28 119.38 0)
@@ -2680,7 +2817,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -2689,13 +2826,13 @@
   (symbol (lib_id "Device:R") (at 44.45 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 32e92c65-cfba-49db-bfd1-7502ecc4d9c3)
-    (property "Reference" "R2" (at 46.99 146.685 0)
+    (property "Reference" "R11" (at 46.99 146.685 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 46.99 149.225 0)
+    (property "Value" "4k7" (at 46.99 149.225 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 42.672 147.32 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 42.672 147.32 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 147.32 0)
@@ -2706,7 +2843,58 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R2") (unit 1)
+          (reference "R11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 152.4 74.93 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 353fa967-5378-463f-b8d0-3a4c009eb797)
+    (property "Reference" "#PWR022" (at 152.4 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 152.4 80.01 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 152.4 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 152.4 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 571aa0fa-d848-4367-ad1b-415b82f1b6f8))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR022") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 152.4 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 37d82980-bd4f-46de-90dc-2f0af853a4f3)
+    (property "Reference" "C3" (at 156.21 70.485 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 156.21 73.025 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" (at 153.3652 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 152.4 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e0bf3549-a038-4829-a71d-a16d867082df))
+    (pin "2" (uuid 55512aa3-ec14-4f5c-805b-f2278dfaa266))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -2718,10 +2906,10 @@
     (property "Reference" "C2" (at 53.34 28.575 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 53.34 31.115 0)
+    (property "Value" "100n" (at 53.34 31.115 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 50.4952 33.02 0)
+    (property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" (at 50.4952 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 49.53 29.21 0)
@@ -2741,13 +2929,13 @@
   (symbol (lib_id "Device:R") (at 242.57 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3ded063d-7eb8-4d58-842c-192377d3c80b)
-    (property "Reference" "R7" (at 245.11 23.495 0)
+    (property "Reference" "R1" (at 245.11 23.495 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 245.11 26.035 0)
+    (property "Value" "10k" (at 245.11 26.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 240.792 24.13 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 240.792 24.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 242.57 24.13 0)
@@ -2758,7 +2946,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R7") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -2767,7 +2955,7 @@
   (symbol (lib_id "power:GND") (at 44.45 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 411f08ab-1cd0-4736-9a06-db5b28d7a288)
-    (property "Reference" "#PWR06" (at 44.45 190.5 0)
+    (property "Reference" "#PWR048" (at 44.45 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 44.45 189.23 0)
@@ -2783,7 +2971,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -2792,7 +2980,7 @@
   (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 259.08 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4144200b-9fb3-4b56-a57a-dded2a0c15d8)
-    (property "Reference" "J1" (at 261.62 121.285 0)
+    (property "Reference" "J7" (at 261.62 121.285 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Screw_Terminal_01x02" (at 261.62 123.825 0)
@@ -2809,7 +2997,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J1") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -2818,7 +3006,7 @@
   (symbol (lib_id "power:+12V") (at 19.05 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 422f41ee-a1e3-4845-80a6-0cf5e9f558d7)
-    (property "Reference" "#PWR029" (at 19.05 115.57 0)
+    (property "Reference" "#PWR037" (at 19.05 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 19.05 107.95 0)
@@ -2834,7 +3022,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -2843,7 +3031,7 @@
   (symbol (lib_id "power:+5V") (at 151.13 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44592948-837b-4f85-93d6-80da290bc850)
-    (property "Reference" "#PWR015" (at 151.13 29.21 0)
+    (property "Reference" "#PWR05" (at 151.13 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 151.13 21.59 0)
@@ -2859,7 +3047,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -2868,7 +3056,7 @@
   (symbol (lib_id "power:GND") (at 181.61 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44ae586b-4b20-4600-aedc-42f3d314bc7a)
-    (property "Reference" "#PWR02" (at 181.61 163.83 0)
+    (property "Reference" "#PWR043" (at 181.61 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 181.61 162.56 0)
@@ -2884,7 +3072,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -2893,7 +3081,7 @@
   (symbol (lib_id "power:+5V") (at 39.37 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 46b9be83-3d77-470a-9e30-e6c344904661)
-    (property "Reference" "#PWR032" (at 39.37 29.21 0)
+    (property "Reference" "#PWR03" (at 39.37 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 39.37 21.59 0)
@@ -2909,7 +3097,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2918,13 +3106,13 @@
   (symbol (lib_id "Connector:Conn_01x03_Pin") (at 144.78 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 480f371a-70c1-49a9-9205-a31118fcc7b2)
-    (property "Reference" "J4" (at 145.415 24.13 0)
+    (property "Reference" "J1" (at 145.415 24.13 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x03_Pin" (at 134.62 26.67 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 144.78 30.48 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 144.78 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 30.48 0)
@@ -2936,7 +3124,33 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J4") (unit 1)
+          (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 162.56 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4cd14734-cda8-4414-be5f-240a1234e0e2)
+    (property "Reference" "C4" (at 166.37 70.485 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 166.37 73.025 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" (at 163.5252 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 162.56 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f886e822-adc9-4c68-a330-c372225655f1))
+    (pin "2" (uuid 472134ba-7648-47af-9b65-34ef7128383d))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -2948,10 +3162,10 @@
     (property "Reference" "R5" (at 193.04 31.115 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 193.04 33.655 0)
+    (property "Value" "1k" (at 193.04 33.655 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 188.722 31.75 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 188.722 31.75 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 31.75 0)
@@ -2971,7 +3185,7 @@
   (symbol (lib_id "power:GND") (at 259.08 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5333129f-a550-4b44-9d50-1f0f82bc7447)
-    (property "Reference" "#PWR018" (at 259.08 54.61 0)
+    (property "Reference" "#PWR012" (at 259.08 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 259.08 53.34 0)
@@ -2987,7 +3201,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -3022,13 +3236,13 @@
   (symbol (lib_id "Device:R") (at 228.6 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 55321172-bbf7-4eae-8464-65dc40ddc109)
-    (property "Reference" "R9" (at 231.14 71.755 0)
+    (property "Reference" "R7" (at 231.14 71.755 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 231.14 74.295 0)
+    (property "Value" "1k" (at 231.14 74.295 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 226.822 72.39 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 226.822 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 228.6 72.39 0)
@@ -3039,7 +3253,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R9") (unit 1)
+          (reference "R7") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 152.4 67.31 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 561bc8a6-fc3b-44a3-b3e5-32abe160e5e1)
+    (property "Reference" "#PWR019" (at 152.4 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 152.4 63.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 152.4 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 152.4 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1221b65f-fd75-48e0-83d3-348c5f93813e))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -3048,7 +3287,7 @@
   (symbol (lib_id "power:GND") (at 149.86 167.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 591ff757-12a4-48f8-b913-6424e282a6e9)
-    (property "Reference" "#PWR010" (at 149.86 173.99 0)
+    (property "Reference" "#PWR045" (at 149.86 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 149.86 172.72 0)
@@ -3064,7 +3303,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -3073,7 +3312,7 @@
   (symbol (lib_id "power:GND") (at 190.5 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5a687ed1-8c4c-4b80-b5ad-68746170cadd)
-    (property "Reference" "#PWR013" (at 190.5 57.15 0)
+    (property "Reference" "#PWR015" (at 190.5 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 55.88 0)
@@ -3089,7 +3328,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -3098,13 +3337,13 @@
   (symbol (lib_id "Device:LED") (at 179.07 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5ee4f321-e85b-485f-a4bc-ca977d80a516)
-    (property "Reference" "D1" (at 182.88 42.8625 90)
+    (property "Reference" "D2" (at 182.88 42.8625 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 182.88 45.4025 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 179.07 41.91 0)
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 179.07 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 179.07 41.91 0)
@@ -3115,7 +3354,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "D1") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -3124,7 +3363,7 @@
   (symbol (lib_id "Transistor_BJT:BC548") (at 179.07 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 64b74ef4-bd3e-4f81-95f9-bc551524e00b)
-    (property "Reference" "Q5" (at 184.15 141.605 0)
+    (property "Reference" "Q4" (at 184.15 141.605 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC548" (at 184.15 144.145 0)
@@ -3142,7 +3381,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q5") (unit 1)
+          (reference "Q4") (unit 1)
         )
       )
     )
@@ -3154,10 +3393,10 @@
     (property "Reference" "R4" (at 181.61 31.115 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 181.61 33.655 0)
+    (property "Value" "1k" (at 181.61 33.655 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 177.292 31.75 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 177.292 31.75 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 179.07 31.75 0)
@@ -3177,7 +3416,7 @@
   (symbol (lib_id "power:GND") (at 77.47 168.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6ba6788b-c5c9-463b-a0c4-cb3d95b412a6)
-    (property "Reference" "#PWR09" (at 77.47 175.26 0)
+    (property "Reference" "#PWR046" (at 77.47 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 77.47 173.99 0)
@@ -3193,7 +3432,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -3202,7 +3441,7 @@
   (symbol (lib_id "power:+5V") (at 228.6 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6bff7d73-942d-4dcd-b235-65e1e7a82a9a)
-    (property "Reference" "#PWR024" (at 228.6 60.96 0)
+    (property "Reference" "#PWR017" (at 228.6 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 228.6 53.34 0)
@@ -3218,7 +3457,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -3227,7 +3466,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 154.94 161.29 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6f31dfe0-cd15-478e-b6c0-3c2b3a7e6a7f)
-    (property "Reference" "J3" (at 151.13 157.48 0)
+    (property "Reference" "J8" (at 151.13 157.48 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 156.21 164.465 0)
@@ -3244,7 +3483,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J3") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -3253,7 +3492,7 @@
   (symbol (lib_id "Transistor_FET:IRF540N") (at 227.33 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7029c672-ce9c-4cc9-a4f8-32509bf5e99e)
-    (property "Reference" "Q1" (at 233.68 135.255 0)
+    (property "Reference" "Q2" (at 233.68 135.255 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "IRF540N" (at 233.68 137.795 0)
@@ -3271,7 +3510,45 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q1") (unit 1)
+          (reference "Q2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 248.92 73.66 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 711dbd04-ef1a-4073-9e0c-74f32315ffe1)
+    (property "Reference" "U1" (at 252.73 66.04 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LM324" (at 254 68.58 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 247.65 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" (at 250.19 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f1f12239-785a-4aa8-94ee-e6c3203d8842))
+    (pin "2" (uuid 653165d8-523b-4b27-bb18-411af002258a))
+    (pin "3" (uuid 1e19ef55-a21a-4c01-a041-d75e520590e8))
+    (pin "5" (uuid eefcb5d1-dcf5-4cf9-b5c9-f9a073cd670b))
+    (pin "6" (uuid 8cd1089a-1fa8-43be-af02-eacd597392fc))
+    (pin "7" (uuid a99cd079-8092-492e-b6c3-7865a6941ed4))
+    (pin "10" (uuid 0dcb8574-60c0-49a7-bc0d-15a5cc68eb01))
+    (pin "8" (uuid 952ac113-a81b-4422-b7e7-04e32834001b))
+    (pin "9" (uuid be14afa3-bcbb-460e-bc97-94d1fb8d547d))
+    (pin "12" (uuid 18671471-583e-4ad9-a20a-480934cef5b8))
+    (pin "13" (uuid 5500caf8-f8de-4f2f-92f6-415c353fef8f))
+    (pin "14" (uuid 5ca8f0e0-3350-4923-99cc-1bfc82ab77c3))
+    (pin "11" (uuid d5c3a088-9568-4d6e-85ea-dc656d45dc33))
+    (pin "4" (uuid e153381d-c46b-49cc-8612-b7d9bc4d629c))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -3280,13 +3557,13 @@
   (symbol (lib_id "Device:R") (at 259.08 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 73dc55b5-a1b9-47b5-b397-5207715c1fad)
-    (property "Reference" "R8" (at 261.62 23.495 0)
+    (property "Reference" "R2" (at 261.62 23.495 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 261.62 26.035 0)
+    (property "Value" "10k" (at 261.62 26.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 257.302 24.13 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 257.302 24.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 259.08 24.13 0)
@@ -3297,7 +3574,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R8") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -3306,13 +3583,13 @@
   (symbol (lib_id "Device:R") (at 111.76 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 790e870f-b408-41db-9036-b1e05146283f)
-    (property "Reference" "R3" (at 114.3 145.415 0)
+    (property "Reference" "R10" (at 114.3 145.415 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 114.3 147.955 0)
+    (property "Value" "4k7" (at 114.3 147.955 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 109.982 146.05 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 109.982 146.05 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 111.76 146.05 0)
@@ -3323,7 +3600,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R3") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -3332,7 +3609,7 @@
   (symbol (lib_id "Transistor_BJT:BC558") (at 128.27 167.64 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 79ec9ed4-414d-44e4-a76f-c611b40fc47a)
-    (property "Reference" "Q11" (at 133.35 167.005 0)
+    (property "Reference" "Q9" (at 133.35 167.005 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC558" (at 133.35 169.545 0)
@@ -3350,7 +3627,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q11") (unit 1)
+          (reference "Q9") (unit 1)
         )
       )
     )
@@ -3359,7 +3636,7 @@
   (symbol (lib_id "power:+3V3") (at 182.88 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a5af60d-c5f0-4188-a2e1-4d16e9b86d04)
-    (property "Reference" "#PWR038" (at 182.88 72.39 0)
+    (property "Reference" "#PWR021" (at 182.88 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 182.88 64.77 0)
@@ -3375,7 +3652,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -3384,13 +3661,13 @@
   (symbol (lib_id "Device:R") (at 181.61 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7af80288-6397-4d16-84fb-2c7a420e3909)
-    (property "Reference" "R1" (at 184.15 120.015 0)
+    (property "Reference" "R8" (at 184.15 120.015 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 184.15 122.555 0)
+    (property "Value" "4k7" (at 184.15 122.555 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 179.832 120.65 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 179.832 120.65 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 181.61 120.65 0)
@@ -3401,7 +3678,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R1") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -3410,7 +3687,7 @@
   (symbol (lib_id "power:GND") (at 135.89 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7bcb860b-0641-4136-821f-4429b1019f0c)
-    (property "Reference" "#PWR028" (at 135.89 124.46 0)
+    (property "Reference" "#PWR039" (at 135.89 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 135.89 123.19 0)
@@ -3426,7 +3703,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -3435,13 +3712,13 @@
   (symbol (lib_id "Device:D_Zener") (at 265.43 80.01 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7d1c5531-e0ec-4a96-8748-47df53f05359)
-    (property "Reference" "D4" (at 267.97 79.375 90)
+    (property "Reference" "D5" (at 267.97 79.375 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "D_Zener" (at 267.97 81.915 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 265.43 80.01 0)
+    (property "Footprint" "Diode_THT:D_A-405_P7.62mm_Horizontal" (at 265.43 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 265.43 80.01 0)
@@ -3452,7 +3729,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "D4") (unit 1)
+          (reference "D5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 162.56 67.31 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 7edee15d-4ef1-483c-a251-41be02010aa5)
+    (property "Reference" "#PWR020" (at 162.56 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 162.56 63.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 162.56 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 162.56 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fff767d5-1f54-4b9a-84ab-3ca7675e8870))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -3464,10 +3766,10 @@
     (property "Reference" "C1" (at 43.18 28.575 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 43.18 31.115 0)
+    (property "Value" "100n" (at 43.18 31.115 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 40.3352 33.02 0)
+    (property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" (at 40.3352 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 39.37 29.21 0)
@@ -3484,10 +3786,36 @@
     )
   )
 
+  (symbol (lib_id "Device:C") (at 238.76 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 81abaed5-5901-430b-a3a7-689e020caf27)
+    (property "Reference" "C5" (at 242.57 94.615 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 242.57 97.155 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" (at 239.7252 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 238.76 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 5ffe0e94-f6b7-4a30-b9d7-6005d64f5ac0))
+    (pin "2" (uuid 61ed0cc6-bb08-49f6-a6e3-c3dbc782c8bd))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "C5") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+12V") (at 143.51 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81d8403b-59a3-46c2-9da8-fb0647510fcf)
-    (property "Reference" "#PWR040" (at 143.51 88.9 0)
+    (property "Reference" "#PWR027" (at 143.51 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 143.51 81.28 0)
@@ -3503,7 +3831,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -3512,7 +3840,7 @@
   (symbol (lib_id "Transistor_BJT:BC548") (at 198.12 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8339c032-2209-4a5e-b117-256a8fa77a4b)
-    (property "Reference" "Q3" (at 203.2 128.905 0)
+    (property "Reference" "Q1" (at 203.2 128.905 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC548" (at 203.2 131.445 0)
@@ -3530,7 +3858,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q3") (unit 1)
+          (reference "Q1") (unit 1)
         )
       )
     )
@@ -3539,7 +3867,7 @@
   (symbol (lib_id "Transistor_BJT:BC558") (at 60.96 168.91 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 89909f48-ee8c-4960-9315-b74e71a824eb)
-    (property "Reference" "Q8" (at 66.04 168.275 0)
+    (property "Reference" "Q11" (at 66.04 168.275 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC558" (at 66.04 170.815 0)
@@ -3557,7 +3885,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q8") (unit 1)
+          (reference "Q11") (unit 1)
         )
       )
     )
@@ -3566,7 +3894,7 @@
   (symbol (lib_id "power:+3V3") (at 242.57 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8b1d93b7-7f06-4187-b6ba-027399d70db7)
-    (property "Reference" "#PWR019" (at 242.57 22.86 0)
+    (property "Reference" "#PWR01" (at 242.57 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 242.57 15.24 0)
@@ -3582,7 +3910,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -3591,7 +3919,7 @@
   (symbol (lib_id "power:+12V") (at 44.45 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d8294ed-f6f3-4185-bbad-0ce0269bae47)
-    (property "Reference" "#PWR05" (at 44.45 139.7 0)
+    (property "Reference" "#PWR042" (at 44.45 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 44.45 132.08 0)
@@ -3607,7 +3935,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -3616,13 +3944,13 @@
   (symbol (lib_id "Connector_Generic:Conn_02x05_Odd_Even") (at 190.5 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8ee3eab0-8d80-4fc3-8ba2-f629354f75aa)
-    (property "Reference" "J10" (at 191.77 68.58 0)
+    (property "Reference" "J3" (at 191.77 68.58 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x05_Odd_Even" (at 191.77 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 190.5 76.2 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" (at 190.5 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 76.2 0)
@@ -3641,7 +3969,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J10") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -3650,7 +3978,7 @@
   (symbol (lib_id "power:GND") (at 248.92 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 942a7556-09ce-49d7-8c1e-171e24f95274)
-    (property "Reference" "#PWR021" (at 248.92 93.98 0)
+    (property "Reference" "#PWR028" (at 248.92 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 248.92 92.71 0)
@@ -3666,7 +3994,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -3675,7 +4003,7 @@
   (symbol (lib_id "power:GND") (at 160.02 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9448e2ff-3737-4d55-b158-c399587983e6)
-    (property "Reference" "#PWR039" (at 160.02 106.68 0)
+    (property "Reference" "#PWR034" (at 160.02 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 105.41 0)
@@ -3691,7 +4019,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR034") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 162.56 74.93 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 992b5a09-0473-4234-aa15-4577a1c3c227)
+    (property "Reference" "#PWR023" (at 162.56 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 162.56 80.01 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 162.56 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 162.56 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e9c42293-ec98-4952-a60a-bb5e5ecd31dc))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -3700,7 +4053,7 @@
   (symbol (lib_id "power:+12V") (at 181.61 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9ac70215-2564-4738-a149-9200991dab28)
-    (property "Reference" "#PWR03" (at 181.61 113.03 0)
+    (property "Reference" "#PWR035" (at 181.61 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 181.61 105.41 0)
@@ -3716,7 +4069,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -3725,13 +4078,13 @@
   (symbol (lib_id "Device:LED") (at 201.93 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9c43293a-0014-4fb9-ba36-b64d7b982ed3)
-    (property "Reference" "D3" (at 205.74 42.8625 90)
+    (property "Reference" "D4" (at 205.74 42.8625 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 205.74 45.4025 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 201.93 41.91 0)
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 201.93 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 201.93 41.91 0)
@@ -3742,7 +4095,45 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "D3") (unit 1)
+          (reference "D4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 251.46 73.66 0) (unit 5)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 9c514ba8-282a-4d64-8dd9-8897191cea15)
+    (property "Reference" "U1" (at 250.19 73.025 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Value" "LM324" (at 250.19 74.295 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Footprint" "" (at 250.19 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" (at 252.73 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 57c8d6a8-4bbf-4a04-9042-3eb8a00ffb73))
+    (pin "2" (uuid ad9f06b5-2527-4822-9c43-3b268e4a2c6d))
+    (pin "3" (uuid 4879b22b-6bd6-43ff-a390-fa8c768c5b34))
+    (pin "5" (uuid f78fd2a5-2cce-4699-991f-925326513910))
+    (pin "6" (uuid 00465035-472b-4c0d-b888-21dc99f8ddba))
+    (pin "7" (uuid 34dcc093-6df2-4fcb-9534-904c98277232))
+    (pin "10" (uuid 751ac552-3133-4850-9a05-fe354d9f921f))
+    (pin "8" (uuid da944d2e-17a5-4259-8990-98d0d33524a0))
+    (pin "9" (uuid 46d0b4e4-9666-4d7c-839a-72aacca18617))
+    (pin "12" (uuid 78f4c1f0-a2da-492c-a2e5-8804f21b4610))
+    (pin "13" (uuid d47eb177-e34a-4575-b37c-376b99d90525))
+    (pin "14" (uuid 6128b12e-48a4-465a-a866-f0dc9aacce57))
+    (pin "11" (uuid 3314e338-b76f-464a-8e80-965cc2672b89))
+    (pin "4" (uuid f2fdcbb6-dce1-4297-86b4-25177dadd19c))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "U1") (unit 5)
         )
       )
     )
@@ -3751,7 +4142,7 @@
   (symbol (lib_id "power:+3V3") (at 49.53 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f4275da-4567-4568-a09b-a8b84d74c31c)
-    (property "Reference" "#PWR035" (at 49.53 29.21 0)
+    (property "Reference" "#PWR04" (at 49.53 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 49.53 21.59 0)
@@ -3767,7 +4158,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -3776,7 +4167,7 @@
   (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 26.67 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a1e6ee2e-610d-4263-95c9-7b9eaf15d94a)
-    (property "Reference" "J7" (at 29.21 114.935 0)
+    (property "Reference" "J5" (at 29.21 114.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Screw_Terminal_01x02" (at 29.21 117.475 0)
@@ -3793,7 +4184,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J7") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -3802,7 +4193,7 @@
   (symbol (lib_id "power:+5V") (at 168.91 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a3484d77-0008-45f4-99ab-013d203e40e6)
-    (property "Reference" "#PWR041" (at 168.91 87.63 0)
+    (property "Reference" "#PWR025" (at 168.91 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 168.91 80.01 0)
@@ -3818,7 +4209,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -3827,7 +4218,7 @@
   (symbol (lib_id "Transistor_BJT:BC548") (at 128.27 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid adacac93-ecc2-4fed-beff-a12f2da38e92)
-    (property "Reference" "Q10" (at 133.35 154.305 0)
+    (property "Reference" "Q6" (at 133.35 154.305 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC548" (at 133.35 156.845 0)
@@ -3845,7 +4236,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q10") (unit 1)
+          (reference "Q6") (unit 1)
         )
       )
     )
@@ -3854,7 +4245,7 @@
   (symbol (lib_id "power:+5V") (at 248.92 62.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b070b0f5-0aaa-4217-8a1c-61bd9ff1f60e)
-    (property "Reference" "#PWR022" (at 248.92 66.04 0)
+    (property "Reference" "#PWR018" (at 248.92 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 248.92 58.42 0)
@@ -3870,7 +4261,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -3879,7 +4270,7 @@
   (symbol (lib_id "Transistor_BJT:BC548") (at 109.22 167.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b12b5d24-4980-4ce8-bec1-06c2e3cad14a)
-    (property "Reference" "Q9" (at 114.3 167.005 0)
+    (property "Reference" "Q8" (at 114.3 167.005 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC548" (at 114.3 169.545 0)
@@ -3897,7 +4288,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q9") (unit 1)
+          (reference "Q8") (unit 1)
         )
       )
     )
@@ -3906,7 +4297,7 @@
   (symbol (lib_id "power:+12V") (at 254 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b191fcb6-bffc-4eb6-857c-7c07a7afbae6)
-    (property "Reference" "#PWR04" (at 254 113.03 0)
+    (property "Reference" "#PWR036" (at 254 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 254 105.41 0)
@@ -3922,7 +4313,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -3931,7 +4322,7 @@
   (symbol (lib_id "power:GND") (at 151.13 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bcb6d025-6843-4b3c-974d-9f44e2693f6b)
-    (property "Reference" "#PWR016" (at 151.13 41.91 0)
+    (property "Reference" "#PWR010" (at 151.13 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 151.13 40.64 0)
@@ -3947,7 +4338,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -3956,7 +4347,7 @@
   (symbol (lib_id "power:+3V3") (at 83.82 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c0946a47-c6a2-428e-81de-d30734a38766)
-    (property "Reference" "#PWR026" (at 83.82 36.83 0)
+    (property "Reference" "#PWR09" (at 83.82 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 83.82 29.21 0)
@@ -3972,7 +4363,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -3981,7 +4372,7 @@
   (symbol (lib_id "power:+12V") (at 31.75 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c131ed5e-2065-492f-8570-58d6a11753b1)
-    (property "Reference" "#PWR036" (at 31.75 93.98 0)
+    (property "Reference" "#PWR030" (at 31.75 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 31.75 86.36 0)
@@ -3997,7 +4388,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -4006,7 +4397,7 @@
   (symbol (lib_id "power:GND") (at 201.93 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c61b4ce7-0074-4842-90a3-d956eb498056)
-    (property "Reference" "#PWR014" (at 201.93 57.15 0)
+    (property "Reference" "#PWR016" (at 201.93 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 201.93 55.88 0)
@@ -4022,7 +4413,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -4031,13 +4422,13 @@
   (symbol (lib_id "Device:R") (at 99.06 167.64 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c8cf9e9f-4e44-4de5-bdc8-a5b8230c2187)
-    (property "Reference" "R11" (at 99.06 162.56 90)
+    (property "Reference" "R12" (at 99.06 162.56 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 99.06 165.1 90)
+    (property "Value" "1k" (at 99.06 165.1 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 99.06 169.418 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 99.06 169.418 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 99.06 167.64 0)
@@ -4048,7 +4439,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R11") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -4057,7 +4448,7 @@
   (symbol (lib_id "Transistor_FET:IRF540N") (at 256.54 135.89 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cc3ad247-5446-48fe-8638-f69b25439331)
-    (property "Reference" "Q2" (at 250.19 135.255 0)
+    (property "Reference" "Q3" (at 250.19 135.255 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "IRF540N" (at 250.19 137.795 0)
@@ -4075,7 +4466,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q2") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
     )
@@ -4084,13 +4475,13 @@
   (symbol (lib_id "Device:R") (at 168.91 142.24 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cc6962d0-48d5-4edc-b07e-1cc44d7c3617)
-    (property "Reference" "R10" (at 168.91 137.16 90)
+    (property "Reference" "R9" (at 168.91 137.16 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 168.91 139.7 90)
+    (property "Value" "1k" (at 168.91 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 168.91 144.018 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 168.91 144.018 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 142.24 0)
@@ -4101,7 +4492,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R10") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -4110,7 +4501,7 @@
   (symbol (lib_id "power:+12V") (at 111.76 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cdfcd1c5-4806-41cc-bb06-8f306dd1bd57)
-    (property "Reference" "#PWR07" (at 111.76 138.43 0)
+    (property "Reference" "#PWR041" (at 111.76 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 111.76 130.81 0)
@@ -4126,7 +4517,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR041") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 238.76 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d1852c5d-80f5-423a-a0f7-571103f38e60)
+    (property "Reference" "#PWR031" (at 238.76 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 238.76 87.63 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 238.76 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 238.76 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 771f0b78-84cc-48c3-b050-7fc6ee0daf4a))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -4135,7 +4551,7 @@
   (symbol (lib_id "Transistor_BJT:BC548") (at 41.91 168.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d3dff406-4f46-49d1-809b-6421e6b38eee)
-    (property "Reference" "Q6" (at 46.99 168.275 0)
+    (property "Reference" "Q10" (at 46.99 168.275 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BC548" (at 46.99 170.815 0)
@@ -4153,7 +4569,32 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "Q6") (unit 1)
+          (reference "Q10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 238.76 99.06 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d479b304-eae1-4b45-a40d-4460c6d3437b)
+    (property "Reference" "#PWR033" (at 238.76 105.41 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 238.76 104.14 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 238.76 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 238.76 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7f007a44-bf18-4858-8abc-0e51c4c84a0b))
+    (instances
+      (project "adega_iot"
+        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -4162,7 +4603,7 @@
   (symbol (lib_id "power:+5V") (at 77.47 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d50e2c0a-ff96-43b4-ae8e-5b0fb674c160)
-    (property "Reference" "#PWR027" (at 77.47 36.83 0)
+    (property "Reference" "#PWR08" (at 77.47 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 77.47 29.21 0)
@@ -4178,7 +4619,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -4187,7 +4628,7 @@
   (symbol (lib_id "power:GND") (at 182.88 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d56a0f76-9150-492d-a04d-09868ba75195)
-    (property "Reference" "#PWR037" (at 182.88 90.17 0)
+    (property "Reference" "#PWR026" (at 182.88 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 182.88 88.9 0)
@@ -4203,7 +4644,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -4212,7 +4653,7 @@
   (symbol (lib_id "power:GND") (at 39.37 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d9d45d9d-d4f1-4568-b251-5177346d70c0)
-    (property "Reference" "#PWR031" (at 39.37 39.37 0)
+    (property "Reference" "#PWR06" (at 39.37 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 39.37 38.1 0)
@@ -4228,7 +4669,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -4240,10 +4681,10 @@
     (property "Reference" "R6" (at 204.47 31.115 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 204.47 33.655 0)
+    (property "Value" "1k" (at 204.47 33.655 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 200.152 31.75 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 200.152 31.75 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 201.93 31.75 0)
@@ -4263,7 +4704,7 @@
   (symbol (lib_id "power:GND") (at 242.57 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e54adae7-0be0-4a0b-96a5-04cedd86deb1)
-    (property "Reference" "#PWR017" (at 242.57 54.61 0)
+    (property "Reference" "#PWR011" (at 242.57 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 242.57 53.34 0)
@@ -4279,7 +4720,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -4288,7 +4729,7 @@
   (symbol (lib_id "power:GND") (at 31.75 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e78e5a0d-08d1-4283-8189-8290fd077fee)
-    (property "Reference" "#PWR033" (at 31.75 105.41 0)
+    (property "Reference" "#PWR032" (at 31.75 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 31.75 104.14 0)
@@ -4304,7 +4745,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -4313,13 +4754,13 @@
   (symbol (lib_id "Device:R") (at 31.75 168.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e8278a77-8335-462d-990a-2a1f7743605b)
-    (property "Reference" "R12" (at 31.75 163.83 90)
+    (property "Reference" "R13" (at 31.75 163.83 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 31.75 166.37 90)
+    (property "Value" "1k" (at 31.75 166.37 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 31.75 170.688 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (at 31.75 170.688 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 31.75 168.91 0)
@@ -4330,39 +4771,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "R12") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Amplifier_Operational:RC4558") (at 251.46 73.66 0) (unit 3)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ec669441-cd9f-4e75-926e-aa712cc6630a)
-    (property "Reference" "U1" (at 250.19 73.025 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Value" "RC4558" (at 250.19 78.74 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "" (at 251.46 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/rc4558.pdf" (at 251.46 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid eb567ddd-37c9-42a6-b0d4-ab5f5ea53b86))
-    (pin "2" (uuid e39a7ce2-af6c-41bf-a6f9-acee6e0efa93))
-    (pin "3" (uuid 89cd26bf-0007-45ab-8537-a4df151f7d3f))
-    (pin "5" (uuid e6675be1-14de-4dc0-9d84-01688d667c0a))
-    (pin "6" (uuid 16618cb8-5f74-4d39-b49b-165c59ff3f83))
-    (pin "7" (uuid 95ce34ce-704a-49b6-96f7-35cce09ed845))
-    (pin "4" (uuid 2329ec5b-b535-4326-ba9c-3e5f5e604a9d))
-    (pin "8" (uuid 9c35cb96-b41c-4652-b332-aa35ff663f56))
-    (instances
-      (project "adega_iot"
-        (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "U1") (unit 3)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -4371,7 +4780,7 @@
   (symbol (lib_id "power:GND") (at 254 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2129f17-cbaa-4f3a-be87-75b70174ec29)
-    (property "Reference" "#PWR01" (at 254 163.83 0)
+    (property "Reference" "#PWR044" (at 254 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 254 162.56 0)
@@ -4387,7 +4796,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -4396,13 +4805,13 @@
   (symbol (lib_id "Device:LED") (at 190.5 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f31bf52d-f920-408c-94b0-43cfdcdc5020)
-    (property "Reference" "D2" (at 194.31 42.8625 90)
+    (property "Reference" "D3" (at 194.31 42.8625 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 194.31 45.4025 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 190.5 41.91 0)
+    (property "Footprint" "LED_THT:LED_D3.0mm" (at 190.5 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 41.91 0)
@@ -4413,7 +4822,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "D2") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -4428,7 +4837,7 @@
     (property "Value" "Conn_01x03_Pin" (at 122.555 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 121.92 114.3 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 121.92 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 121.92 114.3 0)
@@ -4511,13 +4920,13 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 223.52 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f84c4869-9931-45de-a2c7-7fab6259dc03)
-    (property "Reference" "J5" (at 222.25 64.135 0)
+    (property "Reference" "J2" (at 222.25 64.135 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x02_Pin" (at 222.25 66.675 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "" (at 223.52 63.5 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 223.52 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 63.5 0)
@@ -4528,7 +4937,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J5") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -4537,13 +4946,13 @@
   (symbol (lib_id "Connector:Conn_01x03_Pin") (at 17.78 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc38c802-3812-456b-951e-9201cea934cb)
-    (property "Reference" "J8" (at 18.415 91.44 0)
+    (property "Reference" "J4" (at 18.415 91.44 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x03_Pin" (at 18.415 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 17.78 95.25 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 17.78 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 17.78 95.25 0)
@@ -4555,7 +4964,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "J8") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -4564,7 +4973,7 @@
   (symbol (lib_id "power:GND") (at 111.76 182.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fe1fe782-c56e-4161-a845-1757bf5e9b88)
-    (property "Reference" "#PWR08" (at 111.76 189.23 0)
+    (property "Reference" "#PWR047" (at 111.76 189.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.76 187.96 0)
@@ -4580,7 +4989,7 @@
     (instances
       (project "adega_iot"
         (path "/f62fdcc3-43ce-497c-a9fd-2188ad81d187"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )

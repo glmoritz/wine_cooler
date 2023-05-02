@@ -3,4 +3,5 @@
   (lib (name "adega_iot")(type "KiCad")(uri "${KIPRJMOD}/adega_iot.kicad_sym")(options "")(descr ""))
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/kicad-libraries/libraries/Espressif.kicad_sym")(options "")(descr ""))
   (lib (name "lm2596")(type "KiCad")(uri "${KIPRJMOD}/lm2596/KiCad/yaaj_dcdc_stepdown_lm2596.kicad_sym")(options "")(descr ""))
+  (lib (name "KF301-2P")(type "KiCad")(uri "${KIPRJMOD}/kf301-2p/KF301-2P.kicad_sym")(options "")(descr ""))
 )
